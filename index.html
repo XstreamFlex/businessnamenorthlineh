@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Northline Home Care | Non-Medical Senior Care Tacoma, WA</title>
+  <meta name="description" content="Compassionate non-medical senior and companion care in Tacoma, Lakewood, and University Place. Family-run since 2019 with consistent caregivers." />
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#f1f5f9', // Warm gray/white base
+              blue: '#0284c7',  // Soft trustworthy blue
+              bluedark: '#0369a1',
+              slate: '#475569',  // Warm slate/gray
+              charcoal: '#1e293b'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-slate-900 dark:text-slate-100 transition-colors duration-300 flex flex-col min-h-screen">
+<header class="sticky top-0 z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo & Brand -->
+        <a href="index.html" class="flex items-center gap-2 group">
+          <div class="w-10 h-10 rounded-lg bg-sky-600 flex items-center justify-center text-white font-bold text-xl shadow-md group-hover:bg-sky-700 transition">
+            N
+          </div>
+          <div>
+            <span class="font-bold text-xl text-slate-900 dark:text-white tracking-tight block leading-none">Northline</span>
+            <span class="text-xs uppercase tracking-wider text-sky-600 font-semibold dark:text-sky-400 block mt-1">Home Care</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a href="index.html" class="font-medium text-sky-600 dark:text-sky-400 border-b-2 border-sky-600 dark:border-sky-400 pb-1">Home</a>
+          <a href="services.html" class="font-medium text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">Services</a>
+          <a href="about.html" class="font-medium text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">About Us</a>
+          <a href="contact.html" class="font-medium text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition">Contact</a>
+        </nav>
+
+        <!-- Theme Toggle & Call CTA -->
+        <div class="hidden md:flex items-center gap-4">
+          <!-- Dark Mode Toggle Button -->
+          <button id="theme-toggle-btn" aria-label="Toggle Theme" class="p-2.5 rounded-lg text-slate-500 hover:text-sky-600 dark:text-slate-400 dark:hover:text-sky-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            <!-- Sun Icon (visible in dark mode) -->
+            <svg id="theme-toggle-sun" class="w-5 h-5 hidden" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 2.243a1 1 0 011.414 0l.707.707a1 1 0 11-1.414 1.414l-.707-.707a1 1 0 010-1.414zM16 10a1 1 0 110-2h1a1 1 0 110 2h-1zM14.828 14.828a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 110-2v1a1 1 0 110 2zm-4-2.243a1 1 0 01-1.414 0l-.707-.707a1 1 0 111.414-1.414l.707.707a1 1 0 010 1.414zM3 10a1 1 0 110-2h1a1 1 0 110 2H3zm1.243-4a1 1 0 010-1.414l.707-.707a1 1 0 111.414 1.414l-.707.707a1 1 0 01-1.414 0z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+            <!-- Moon Icon (visible in light mode) -->
+            <svg id="theme-toggle-moon" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          </button>
+
+          <!-- Call CTA Button -->
+          <a href="tel:2535550148" class="inline-flex items-center gap-2 bg-sky-600 hover:bg-sky-700 text-white px-5 py-2.5 rounded-lg font-semibold shadow-sm transition transform hover:-translate-y-0.5">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M21.384 17.791c-1.222-1.121-2.427-2.181-3.559-3.21-1.07-1.03-2.135-1.03-3.2-.048l-1.096 1.095c-.868-.535-2.16-1.523-3.296-2.658-1.134-1.134-2.122-2.427-2.657-3.295l1.095-1.096c.983-1.066.983-2.13 0-3.2C7.639 4.35 6.58 3.146 5.459 1.924c-1.066-.983-2.13-.983-3.2 0L.983 3.2C.232 3.951-.122 5.034.032 6.136c.451 3.23 2.146 7.424 5.314 10.592 3.168 3.168 7.362 4.863 10.592 5.314 1.1.154 2.184-.199 2.936-.95l1.276-1.277c1.067-1.066 1.067-2.13 0-3.2z"/></svg>
+            <span>Call (253) 555-0148</span>
+          </a>
+        </div>
+
+        <!-- Mobile Navigation Menu Toggle -->
+        <div class="flex items-center gap-2 md:hidden">
+          <button id="mobile-theme-toggle" class="p-2 rounded-lg text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+          </button>
+          <button id="mobile-menu-btn" aria-label="Open Navigation Menu" class="p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+      <div class="px-4 pt-2 pb-6 space-y-3">
+        <a href="index.html" class="block px-3 py-2 rounded-md text-base font-semibold text-sky-600 dark:text-sky-400 bg-slate-50 dark:bg-slate-800">Home</a>
+        <a href="services.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Services</a>
+        <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">About Us</a>
+        <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-slate-700 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-800">Contact</a>
+        <div class="pt-4 border-t border-slate-200 dark:border-slate-800">
+          <p class="px-3 text-xs uppercase tracking-wider text-slate-400 dark:text-slate-500 mb-2">Need Immediate Assistance?</p>
+          <a href="tel:2535550148" class="flex items-center justify-center gap-2 bg-sky-600 hover:bg-sky-700 text-white py-3 px-4 rounded-lg font-bold shadow-sm transition">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M21.384 17.791c-1.222-1.121-2.427-2.181-3.559-3.21-1.07-1.03-2.135-1.03-3.2-.048l-1.096 1.095c-.868-.535-2.16-1.523-3.296-2.658-1.134-1.134-2.122-2.427-2.657-3.295l1.095-1.096c.983-1.066.983-2.13 0-3.2C7.639 4.35 6.58 3.146 5.459 1.924c-1.066-.983-2.13-.983-3.2 0L.983 3.2C.232 3.951-.122 5.034.032 6.136c.451 3.23 2.146 7.424 5.314 10.592 3.168 3.168 7.362 4.863 10.592 5.314 1.1.154 2.184-.199 2.936-.95l1.276-1.277c1.067-1.066 1.067-2.13 0-3.2z"/></svg>
+            <span>Call (253) 555-0148</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Header & Navigation -->
+  
+
+  <main class="flex-grow">
+    
+    <!-- Hero Section with Visual Asset 1 -->
+    <section class="relative bg-slate-50 dark:bg-slate-900/50 pt-10 pb-20 overflow-hidden">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          <!-- Text Columns -->
+          <div class="lg:col-span-7 space-y-6 text-left">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 dark:bg-sky-950/50 border border-sky-100 dark:border-sky-900/50">
+              <span class="w-2.5 h-2.5 rounded-full bg-sky-500 animate-pulse"></span>
+              <span class="text-xs font-semibold uppercase tracking-wider text-sky-700 dark:text-sky-300">Non-Medical Home Care Specialist</span>
+            </div>
+            
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight">
+              Giving parents the comfort to stay safe <span class="text-sky-600 dark:text-sky-400">at home.</span>
+            </h1>
+            
+            <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 leading-relaxed max-w-2xl">
+              Family-run companion care and daily assistance tailored for seniors in <strong class="text-slate-800 dark:text-slate-100 font-semibold">Tacoma</strong>, <strong class="text-slate-800 dark:text-slate-100 font-semibold">Lakewood</strong>, and <strong class="text-slate-800 dark:text-slate-100 font-semibold">University Place</strong>. We bring professional care, reliable companionship, and deep peace of mind to adult children.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 pt-4">
+              <a href="tel:2535550148" class="inline-flex items-center justify-center gap-3 bg-sky-600 hover:bg-sky-700 text-white text-lg px-8 py-4 rounded-xl font-bold shadow-lg shadow-sky-600/20 hover:shadow-sky-700/30 transition transform hover:-translate-y-0.5">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M21.384 17.791c-1.222-1.121-2.427-2.181-3.559-3.21-1.07-1.03-2.135-1.03-3.2-.048l-1.096 1.095c-.868-.535-2.16-1.523-3.296-2.658-1.134-1.134-2.122-2.427-2.657-3.295l1.095-1.096c.983-1.066.983-2.13 0-3.2C7.639 4.35 6.58 3.146 5.459 1.924c-1.066-.983-2.13-.983-3.2 0L.983 3.2C.232 3.951-.122 5.034.032 6.136c.451 3.23 2.146 7.424 5.314 10.592 3.168 3.168 7.362 4.863 10.592 5.314 1.1.154 2.184-.199 2.936-.95l1.276-1.277c1.067-1.066 1.067-2.13 0-3.2z"/></svg>
+                <span>Call Now: (253) 555-0148</span>
+              </a>
+              <a href="#contact-form-section" class="inline-flex items-center justify-center text-slate-700 dark:text-slate-200 hover:text-sky-600 dark:hover:text-sky-400 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-sky-300 dark:hover:border-sky-900 px-8 py-4 rounded-xl font-bold transition">
+                <span>Book Free Consultation</span>
+              </a>
+            </div>
+
+            <!-- Trust Badge/Info line -->
+            <div class="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 border-t border-slate-200 dark:border-slate-800">
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Same Caregiver Consistency</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg class="w-5 h-5 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                <span class="text-sm font-medium text-slate-600 dark:text-slate-300">Written Visit Notes for Families</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Image Column (Asset 1) -->
+          <div class="lg:col-span-5 relative">
+            <div class="absolute inset-0 bg-sky-200 dark:bg-sky-900/30 rounded-2xl transform rotate-2"></div>
+            <div class="relative z-10">
+              <img src="https://xmg.xstreamflex.com/i/IMG3nF" alt="dfy-image-1789439289743.jpg" class="rounded-xl shadow-lg w-full object-cover" />
+            </div>
+            <!-- Trust Card overlay -->
+            <div class="absolute -bottom-6 -left-6 bg-white dark:bg-slate-800 p-4 rounded-xl shadow-xl max-w-xs border border-slate-100 dark:border-slate-700 hidden sm:block z-20">
+              <div class="flex items-center gap-3">
+                <div class="p-2.5 bg-sky-50 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 rounded-lg">
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-slate-500 dark:text-slate-400">Pierce County Roots</p>
+                  <p class="text-sm font-bold text-slate-800 dark:text-white">Family-Run Since 2019</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Essential Non-Medical Disclaimer & Quick Info Bar -->
+    <section class="bg-sky-50 dark:bg-slate-800/40 border-y border-sky-100 dark:border-slate-800/80 py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p class="text-sm text-slate-600 dark:text-slate-300">
+            <strong class="font-bold text-sky-700 dark:text-sky-400">Important Note:</strong> We specialize in <strong class="font-bold">non-medical home care</strong>. We focus on companionship, safety, and physical help—never clinical nursing.
+          </p>
+          <div class="flex items-center gap-4 text-xs font-semibold text-slate-500 dark:text-slate-400">
+            <span>Office Hours: Mon-Fri 8am–6pm</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-slate-300"></span>
+            <span>Care Available 7 Days</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Differentiators Bento / Feature Showcase -->
+    <section class="py-20 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold mb-2">Our Commitments</h2>
+          <p class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
+            How we do home care differently
+          </p>
+          <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+            We know how difficult it is to transition care of a parent to someone else. That’s why we run on trust, transparency, and consistency.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Card 1: Caregiver Consistency -->
+          <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-md transition">
+            <div class="w-12 h-12 bg-sky-100 dark:bg-sky-950/60 rounded-xl flex items-center justify-center text-sky-600 dark:text-sky-400 mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Caregiver Consistency</h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              We work incredibly hard to match the same companion caregiver to your loved one for every single visit. Your parent gets a friend they recognize, not a rotating door of strangers.
+            </p>
+          </div>
+
+          <!-- Card 2: Written Care Notes -->
+          <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-md transition">
+            <div class="w-12 h-12 bg-sky-100 dark:bg-sky-950/60 rounded-xl flex items-center justify-center text-sky-600 dark:text-sky-400 mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Written Visit Notes</h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              After every single visit, our caregivers leave written notes documenting what they ate, how their mood was, tasks completed, and any subtle changes in routine so you always stay in the loop.
+            </p>
+          </div>
+
+          <!-- Card 3: Locally Owned & Managed -->
+          <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 hover:shadow-md transition">
+            <div class="w-12 h-12 bg-sky-100 dark:bg-sky-950/60 rounded-xl flex items-center justify-center text-sky-600 dark:text-sky-400 mb-6">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Family-Run Pierce County Roots</h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Founded and managed right here in Tacoma by Maria. We aren't a national corporate franchise; we make decisions locally and care about our Washington neighbors directly.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview Section (incorporating Visual Asset 2) -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Image block with Visual Asset 2 -->
+          <div class="lg:col-span-5 order-last lg:order-first relative">
+            <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 rounded-2xl transform -rotate-2"></div>
+            <div class="relative z-10">
+              <img src="https://xmg.xstreamflex.com/i/eIyNzV" alt="dfy-image-1789439264836.jpg" class="rounded-xl shadow-lg w-full object-cover" />
+            </div>
+          </div>
+
+          <!-- Services List -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <h2 class="text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold mb-2">What We Do</h2>
+              <h3 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">Our Core Companionship Services</h3>
+              <p class="mt-3 text-slate-600 dark:text-slate-300">
+                To keep your family safe and supported at home, we provide personalized physical, social, and logistical assistance.
+              </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-6 pt-4">
+              <!-- Service 1 -->
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 rounded-md mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Companion Care</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Mental stimulation, reading, conversation, and emotional support.</p>
+                </div>
+              </div>
+
+              <!-- Service 2 -->
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 rounded-md mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Meal Help & Light Housework</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Preparing hot dishes, doing light laundry, and basic kitchen tidy-up.</p>
+                </div>
+              </div>
+
+              <!-- Service 3 -->
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 rounded-md mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Medication Reminders</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Non-clinical tracking to ensure prescriptions are taken on schedule.</p>
+                </div>
+              </div>
+
+              <!-- Service 4 -->
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 rounded-md mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Transportation to Appointments</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Driving to clinics, hair salons, and physical therapy sessions.</p>
+                </div>
+              </div>
+
+              <!-- Service 5 -->
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 rounded-md mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Respite Care for Families</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Step away for an afternoon or weekend knowing your parent is safe.</p>
+                </div>
+              </div>
+
+              <!-- Service 6 -->
+              <div class="flex items-start gap-3">
+                <div class="p-1.5 bg-sky-100 dark:bg-sky-950/50 text-sky-600 dark:text-sky-400 rounded-md mt-0.5">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path></svg>
+                </div>
+                <div>
+                  <h4 class="font-bold text-slate-900 dark:text-white text-base">Overnight Companionship</h4>
+                  <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Constant non-medical monitoring during dark hours for security.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-6">
+              <a href="services.html" class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-bold dark:text-sky-400 dark:hover:text-sky-300">
+                <span>View Full Service Details</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold mb-2">Process</h2>
+          <p class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
+            How it works in 4 easy steps
+          </p>
+          <p class="mt-3 text-slate-600 dark:text-slate-300">
+            Getting started is completely free and requires zero initial commitment.
+          </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <!-- Step 1 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/50 flex items-center justify-center text-sky-600 dark:text-sky-400 font-bold text-lg border border-sky-100 dark:border-sky-900/50">
+              1
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Free Phone Call</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Call us or submit the form. We will discuss your parent's unique needs and schedule.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/50 flex items-center justify-center text-sky-600 dark:text-sky-400 font-bold text-lg border border-sky-100 dark:border-sky-900/50">
+              2
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">In-Home Meeting</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              We meet with you and your parent at home in Tacoma, Lakewood, or UP to design a soft-touch care plan.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/50 flex items-center justify-center text-sky-600 dark:text-sky-400 font-bold text-lg border border-sky-100 dark:border-sky-900/50">
+              3
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Perfect Match</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              We pair them with a matching, vetted caregiver with consistency kept as our primary operational priority.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-sky-50 dark:bg-sky-950/50 flex items-center justify-center text-sky-600 dark:text-sky-400 font-bold text-lg border border-sky-100 dark:border-sky-900/50">
+              4
+            </div>
+            <h3 class="font-bold text-slate-900 dark:text-white text-lg">Written Updates</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Care visits begin immediately. You receive physical, written care diaries after every single visit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Maria / Company Bio (incorporating Visual Asset 3) -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900/50 border-y border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Bio Content -->
+          <div class="lg:col-span-7 space-y-6">
+            <h2 class="text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold">About Our Founder</h2>
+            <h3 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
+              "We care for your parents as if they were our own family."
+            </h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Northline Home Care was founded in 2019 by <strong class="font-bold text-slate-900 dark:text-white">Maria Reynolds</strong> in Tacoma. Having experienced the difficult struggle of managing care for her grandmother, Maria built Northline to relieve adult children from stress while prioritizing deep dignity for the elderly.
+            </p>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+              Every single caregiver we employ goes through deep background checks, specialized non-medical screening, and signs our charter of consistent care. We stay intentionally family-sized so that Maria can personally oversee your loved one's schedule.
+            </p>
+            
+            <div class="pt-2">
+              <a href="about.html" class="inline-flex items-center gap-2 text-sky-600 hover:text-sky-700 font-bold dark:text-sky-400 dark:hover:text-sky-300">
+                <span>Learn more about Maria's Story</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Bio Image with Visual Asset 3 -->
+          <div class="lg:col-span-5 relative">
+            <div class="absolute inset-0 bg-sky-200 dark:bg-sky-950 rounded-2xl transform rotate-2"></div>
+            <div class="relative z-10">
+              <img src="https://xmg.xstreamflex.com/i/XgUcsi" alt="dfy-image-1789439263169.jpg" class="rounded-xl shadow-lg w-full object-cover" />
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section (2 Sample Testimonials) -->
+    <section class="py-20 bg-white dark:bg-slate-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold mb-2">Testimonials</h2>
+          <p class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">
+            Loved by Pierce County families
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          <!-- Sample Testimonial 1 -->
+          <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 relative">
+            <span class="absolute -top-4 -left-4 text-sky-600 text-6xl font-serif">“</span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 dark:bg-amber-950/40 px-2.5 py-1 rounded-md mb-4 inline-block">[Sample Testimonial]</span>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
+              "Working with Maria and her team has been a complete lifesaver. My father lives in Lakewood and I live out of state. Having written care notes sent to me weekly has given me immense peace of mind."
+            </p>
+            <div class="mt-6">
+              <p class="font-bold text-slate-900 dark:text-white">Sarah M.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Daughter of client in Lakewood, WA</p>
+            </div>
+          </div>
+
+          <!-- Sample Testimonial 2 -->
+          <div class="bg-slate-50 dark:bg-slate-800 p-8 rounded-2xl border border-slate-100 dark:border-slate-700 relative">
+            <span class="absolute -top-4 -left-4 text-sky-600 text-6xl font-serif">“</span>
+            <span class="text-xs font-semibold uppercase tracking-wider text-amber-600 bg-amber-50 dark:bg-amber-950/40 px-2.5 py-1 rounded-md mb-4 inline-block">[Sample Testimonial]</span>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed mt-2">
+              "We had terrible experiences with national franchises changing caregivers every week. Northline has kept the exact same companion for my mother in University Place for 6 months. It has made a huge difference."
+            </p>
+            <div class="mt-6">
+              <p class="font-bold text-slate-900 dark:text-white">David K.</p>
+              <p class="text-xs text-slate-500 dark:text-slate-400">Son of client in University Place, WA</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section (5 requested questions) -->
+    <section class="py-20 bg-slate-50 dark:bg-slate-900/50 border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold mb-2">Frequently Asked Questions</h2>
+          <p class="text-3xl font-bold text-slate-900 dark:text-white">Common Questions Families Ask</p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Q1 -->
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Do you accept Medicare or insurance?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Because we focus purely on non-medical companion care and daily help (rather than clinical skilled nursing), we do not accept standard Medicare. We accept private-pay and most Long-Term Care Insurance policies. We are happy to discuss the paperwork during our free consultation.
+            </p>
+          </div>
+
+          <!-- Q2 -->
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">What services do you not provide?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              We are a strictly non-medical care company. We do not provide clinical nursing services, such as injections, wound care, tube feeding, or medication changes.
+            </p>
+          </div>
+
+          <!-- Q3 -->
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">How do background checks work?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Every single caregiver passes rigorous background checks, references verification, and non-medical skills screening. We only hire professionals we would trust in our own homes with our own family.
+            </p>
+          </div>
+
+          <!-- Q4 -->
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">Will my parent always have the same caregiver?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              While we cannot guarantee 100% attendance due to occasional emergencies, consistency is our main differentiator. We prioritize matching your parent with the same primary companion to foster a genuine, trusting relationship.
+            </p>
+          </div>
+
+          <!-- Q5 -->
+          <div class="bg-white dark:bg-slate-800 p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+            <h3 class="font-bold text-lg text-slate-900 dark:text-white mb-2">How soon can care services begin?</h3>
+            <p class="text-slate-600 dark:text-slate-300 text-sm leading-relaxed">
+              Often we can begin scheduling caregiver matching immediately after our initial in-home meeting. Typically services can safely start within 3 to 7 business days of our first contact.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- High-Converting Contact Block with Visual Asset 4 -->
+    <section id="contact-form-section" class="py-20 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Contact Copy & Image -->
+          <div class="lg:col-span-5 space-y-6">
+            <div>
+              <h2 class="text-xs uppercase tracking-wider text-sky-600 dark:text-sky-400 font-bold mb-2">Contact Us</h2>
+              <h3 class="text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white tracking-tight">Let’s talk about how we can support your parent.</h3>
+              <p class="mt-3 text-slate-600 dark:text-slate-300">
+                Contact us to schedule a simple, zero-pressure phone consultation. We serve Tacoma, Lakewood, and University Place.
+              </p>
+            </div>
+
+            <!-- Big Call CTA Box -->
+            <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-xl border border-slate-100 dark:border-slate-700 text-center sm:text-left flex flex-col sm:flex-row items-center gap-4">
+              <div class="w-12 h-12 bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 rounded-full flex items-center justify-center shrink-0">
+                <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12c.002 4.337 2.766 8.211 6.892 9.615l-.014-2.735c.01-.19.062-.375.152-.54l1.396-2.585c-.943-.728-1.426-1.802-1.426-3.055 0-2.316 1.745-4.2 4-4.2s4 1.884 4 4.2c0 1.253-.483 2.327-1.426 3.055l1.396 2.585c.09.165.142.35.152.54l-.014 2.735C19.234 20.211 22 16.337 22 12c0-5.514-4.486-10-10-10zm-1 5a1 1 0 1 1 2 0v4a1 1 0 1 1-2 0V7zm1 11a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z" /></svg>
+              </div>
+              <div>
+                <p class="text-xs uppercase tracking-wider text-slate-400 dark:text-slate-500 font-bold">Call anytime directly</p>
+                <a href="tel:2535550148" class="text-2xl font-bold text-sky-600 dark:text-sky-400 hover:underline">(253) 555-0148</a>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div class="absolute inset-0 bg-slate-200 dark:bg-slate-800 rounded-2xl transform -rotate-1"></div>
+              <img src="https://xmg.xstreamflex.com/i/3fTwpB" alt="dfy-image-1789439291003.jpg" class="rounded-xl shadow-lg w-full object-cover relative z-10" />
+            </div>
+          </div>
+
+          <!-- Contact Form Card -->
+          <div class="lg:col-span-7 bg-slate-50 dark:bg-slate-800/80 p-8 sm:p-10 rounded-2xl border border-slate-100 dark:border-slate-700 shadow-xl">
+            <h4 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">Schedule Your Free In-Home Consultation</h4>
+            
+            <form action="#" method="POST" class="space-y-6">
+              <div class="grid sm:grid-cols-2 gap-6">
+                <!-- Name -->
+                <div>
+                  <label for="form-name" class="block text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-2">Your Name *</label>
+                  <input type="text" id="form-name" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400" />
+                </div>
+                <!-- Phone -->
+                <div>
+                  <label for="form-phone" class="block text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-2">Phone Number *</label>
+                  <input type="tel" id="form-phone" name="phone" required placeholder="(253) 555-0100" class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400" />
+                </div>
+              </div>
+
+              <!-- Best Time to Call -->
+              <div>
+                <label for="form-time" class="block text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-2">Best Time to Call You</label>
+                <select id="form-time" name="best-time-to-call" class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400">
+                  <option value="morning">Morning (8am - 12pm)</option>
+                  <option value="afternoon">Afternoon (12pm - 4pm)</option>
+                  <option value="evening">Evening (4pm - 6pm)</option>
+                </select>
+              </div>
+
+              <!-- Short Message -->
+              <div>
+                <label for="form-message" class="block text-xs uppercase tracking-wider font-bold text-slate-500 dark:text-slate-400 mb-2">Tell us about your parent's needs</label>
+                <textarea id="form-message" name="message" rows="4" placeholder="My mother needs help with meals and transportation twice a week..." class="w-full px-4 py-3 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-sky-500 dark:focus:ring-sky-400"></textarea>
+              </div>
+
+              <!-- Checkbox disclaimer -->
+              <div class="flex items-start gap-3">
+                <input type="checkbox" id="form-disclaimer" required checked class="mt-1 rounded border-slate-200 dark:border-slate-700 text-sky-600 focus:ring-sky-500" />
+                <label for="form-disclaimer" class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">
+                  I understand Northline Home Care provides non-medical assistance. I consent to receive a callback to schedule our initial consultation.
+                </label>
+              </div>
+
+              <!-- Submit button -->
+              <button type="submit" class="w-full bg-sky-600 hover:bg-sky-700 text-white font-bold py-4 px-6 rounded-xl shadow-lg transition duration-200 transform hover:-translate-y-0.5">
+                Submit Consultation Request
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  
+
+  <!-- Script for Mobile Navigation Toggle, Theme Switcher, and Current Year -->
+  <script>
+    // Theme Toggle Functionality
+    const themeToggleBtn = document.getElementById('theme-toggle-btn');
+    const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+    const sunIcon = document.getElementById('theme-toggle-sun');
+    const moonIcon = document.getElementById('theme-toggle-moon');
+
+    // Check localStorage or system settings
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      if (sunIcon) sunIcon.classList.remove('hidden');
+      if (moonIcon) moonIcon.classList.add('hidden');
+    } else {
+      document.documentElement.classList.remove('dark');
+      if (sunIcon) sunIcon.classList.add('hidden');
+      if (moonIcon) moonIcon.classList.remove('hidden');
+    }
+
+    function toggleTheme() {
+      if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+        if (sunIcon) sunIcon.classList.add('hidden');
+        if (moonIcon) moonIcon.classList.remove('hidden');
+      } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+        if (sunIcon) sunIcon.classList.remove('hidden');
+        if (moonIcon) moonIcon.classList.add('hidden');
+      }
+    }
+
+    if (themeToggleBtn) themeToggleBtn.addEventListener('click', toggleTheme);
+    if (mobileThemeToggleBtn) mobileThemeToggleBtn.addEventListener('click', toggleTheme);
+
+    // Mobile Navigation Toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    // Current Year Update
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+      yearSpan.textContent = new Date().getFullYear();
+    }
+  </script>
+
+<footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-16 dark:bg-slate-950">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+        
+        <!-- Column 1: Brand & Desc -->
+        <div class="space-y-4">
+          <a href="index.html" class="flex items-center gap-2">
+            <div class="w-10 h-10 rounded-lg bg-sky-600 flex items-center justify-center text-white font-bold text-xl shadow-md">
+              N
+            </div>
+            <span class="font-bold text-xl text-white tracking-tight">Northline</span>
+          </a>
+          <p class="text-sm leading-relaxed">
+            Premium, non-medical companion and senior helper services. Family-run and rooted in Tacoma since 2019.
+          </p>
+          <p class="text-xs text-sky-400 font-semibold uppercase tracking-wider">
+            (253) 555-0148
+          </p>
+        </div>
+
+        <!-- Column 2: Service Areas -->
+        <div class="space-y-4">
+          <h4 class="text-white font-bold text-base">Service Areas</h4>
+          <ul class="space-y-2 text-sm">
+            <li>Tacoma, WA</li>
+            <li>Lakewood, WA</li>
+            <li>University Place, WA</li>
+            <li>Pierce County (Select Areas)</li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Site Navigation -->
+        <div class="space-y-4">
+          <h4 class="text-white font-bold text-base">Navigation</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="index.html" class="hover:text-white transition">Home</a></li>
+            <li><a href="services.html" class="hover:text-white transition">Services Offered</a></li>
+            <li><a href="about.html" class="hover:text-white transition">About Our Agency</a></li>
+            <li><a href="contact.html" class="hover:text-white transition">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Agency Hours & Info -->
+        <div class="space-y-4">
+          <h4 class="text-white font-bold text-base">Agency Office Hours</h4>
+          <p class="text-sm">
+            Office hours: 8am–6pm Mon–Fri<br />
+            Care service scheduling available 7 days.
+          </p>
+          <p class="text-sm text-slate-500">
+            Email: <a href="mailto:hello@northlinehomecare.example" class="hover:text-white">hello@northlinehomecare.example</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom line with critical non-medical disclaimer -->
+      <div class="mt-12 pt-8 border-t border-slate-800 text-center space-y-4">
+        <p class="text-xs text-slate-600 leading-relaxed max-w-4xl mx-auto">
+          Disclaimer: Northline Home Care provides companion, housekeeping, meal assistance, and physical companionship services. We are a non-medical care company and do not employ clinical nursing staff. We do not offer medical diagnosis, medication administration, injections, wound care, or diagnostic therapies.
+        </p>
+        <p class="text-xs text-slate-500">
+          &copy; <span id="current-year"></span> Northline Home Care. All rights reserved. Locally Owned by Maria Reynolds.
+        </p>
+      </div>
+    </div>
+  </footer>
+<script>
+(function() {
+  function initNavControls() {
+    const btn = document.getElementById('mobile-menu-btn') || document.querySelector('[data-menu-toggle]');
+    const menu = document.getElementById('mobile-menu') || document.querySelector('[data-menu-content]');
+    if (btn && menu) {
+      btn.onclick = function(e) {
+        e.stopPropagation();
+        menu.classList.toggle('hidden');
+      };
+      menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => menu.classList.add('hidden'));
+      });
+    }
+    const themeBtn = document.getElementById('theme-toggle-btn') || document.querySelector('[data-theme-toggle]');
+    if (themeBtn) {
+      themeBtn.onclick = function(e) {
+        e.stopPropagation();
+        document.documentElement.classList.toggle('dark');
+        try { localStorage.setItem('xsites_theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light'); } catch(err){}
+      };
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavControls);
+  } else {
+    initNavControls();
+  }
+})();
+</script>
+</body>
+</html>
